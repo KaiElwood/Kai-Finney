@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-canvas {
-  display: block;
-}
-
 body {
   /* background: #D2E0ED; */
   font-family: "Overpass", sans-serif;
@@ -14,26 +10,26 @@ body {
 
 .back {
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
   display: block;
-  background-image: url("Kai Finney.jpg");
-  background-position: 50% 60%;
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: rgb(231, 241, 255);
 }
 
-.container {
-  width: 40%;
-  position: fixed;
-  top: 20vh;
-  /* height: 600px; */
+.csstransforms {
+  /* Abs positioning makes it not take up vert space */
+  position: absolute;
+  top: 5%;
+  left: 500px;
+
+  /* Rotate from top left corner (not default) */
+  transform-origin: 0 0;
+  transform: rotate(90deg);
 }
 
 .icons {
-  /* padding: 20px 0; */
+  padding-top: 85vh;
   display: flex;
   justify-content: center;
-  /* text-align: center; */
 }
 
 .links {
@@ -61,82 +57,87 @@ body {
 }
 
 #icon1:hover,#icon2:hover,#icon3:hover {
-  text-shadow: 0 4px 3px rgba(255, 153, 153, 0.4)
+  text-shadow: 0 4px 3px rgba(255, 153, 153, 0.4);
 }
 
 #icon1, #icon2, #icon3 {
-  text-shadow: 0 3px 3px rgba(0, 0, 50, .1)
+  text-shadow: 0 3px 3px rgba(0, 0, 50, .1);
 }
 
-h1 {
-  font-size: 100px;
+#finney1{
+  font-size: 150px;
   color: #ff9999;
-  text-align: center;
+}
+#finney2{
+  /* font-size: 150px; */
+  color: rgba(0, 0, 50, .4);
+}
+
+#kai {
+  font-size: 150px;
+  color: #ff9999;
   font-weight: 800;
-  text-shadow: 0 4px 3px rgba(0, 0, 0, 0.4),
-               0 8px 13px rgba(0, 0, 0, 0.3),
-               0 18px 23px rgba(0,0,0,0.1);
   padding: 0;
   margin: 0;
-  /* letter-spacing: .1em; */
-}
-
-.text-pop-up-top {
-	-webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  letter-spacing: .1em;
 }
 
 .card {
-  width: 100%;
   display: flex;
 }
 
-.imgcrop {
-
-}
-
 .card img{
-  position: relative;
-  left: 70%;
-  top: 90vh;
-  padding: 15vh 0vh 10px;
-  /* padding-bottom: 50px; */
-  max-width: 20%;
+  display: block;
+  position: absolute;
+  width: 250px;
+  min-width: 20%;
   object-fit: cover;
-  flex-direction: column;
-  align-content: space-between;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media only screen and (max-device-width: 640px) {
+#img1{
+  left: 45vw;
+  top: 10%;
+}
+
+#img2{
+  left: 70vw;
+  top: 30%;
+}
+
+/* --------------------------------mobile------------------------------------- */
+
+@media screen and (max-width: 834px) {
   .back {
-    width: 100vw;
-    height: 200vh;
+    /* width: 100vw;
+    height: 100vh; */
     display: block;
-    background-image: url("Kai Finney.jpg");
-    background-position: 50% 60%;
-    background-size: cover;
-    background-attachment: fixed;
   }
 
   h1 {
-    font-size: 14vw;
+    font-size: 50vw;
     color: #ff9999;
     text-align: center;
     font-weight: 800;
-    text-shadow: 0 4px 3px rgba(0, 0, 0, 0.4),
-                 0 8px 13px rgba(0, 0, 0, 0.3),
-                 0 18px 23px rgba(0,0,0,0.1);
     padding: 0;
     margin: 0;
+    text-shadow: 0 3px 3px rgba(0, 0, 50, .3)
     /* letter-spacing: .1em; */
+    
   }
 
-  .container {
-    width: 100%;
-    position: fixed;
-    top: 10vh;
-    /* height: 600px; */
-  }
+  .csstransforms {
+  /* Abs positioning makes it not take up vert space */
+  position: fixed;
+  top: 2%;
+  left: 0%;
+  z-index: 1000;
+  width: 100%;
+
+  /* Rotate from top left corner (not default) */
+  transform-origin: 0 0;
+  transform: rotate(0deg);
+}
 
   .fab {
       font-size: 8vw;
@@ -149,85 +150,49 @@ h1 {
   }
 
   .card img{
-    position: relative;
-    left: 70%;
-    top: 100vh;
-    padding: 2vw;
-    padding-bottom: 50px;
-    max-width: 20%;
-    object-fit: cover;
-    flex-direction: column;
-    align-content: space-between;
+  display: block;
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  /* flex-direction: column;
+  align-content: space-between; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .icons {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+  }
+
+  #img1{
+  left: 0;
+  top: 0;
+  }
+
+  #img2{
+  left: 0;
+  top: 0;
+  }
+
+  #finney1{
+    font-size: 15vw;
+    color: #ff9999;
+  }
+  #finney2{
+    /* font-size: 150px; */
+    color: rgba(0, 0, 50, .4);
+  }
+
+  #kai {
+    font-size: 15vw;
+    color: #ff9999;
+    font-weight: 800;
+    padding: 0;
+    margin: 0;
+    letter-spacing: .1em;
   }
 }
-
-
-/* h2 {
-  font-size: 20px;
-  color: #ff9999;
-  text-align: center;
-  font-family: "Overpass", sans-serif;
-  font-weight: 800;
-  padding: 0;
-  margin: 0;
-}
-
-h5 {
-  text-shadow: 0 4px 3px rgba(0, 0, 0, 0.1),
-               0 8px 13px rgba(0, 0, 0, 0.1),
-               0 18px 23px rgba(0,0,0,0.0);
-}
-
-.autof {
-  object-fit: contain;
-  overflow: hidden;
-}
-
-.card1 {
-  color: #185898;
-}
-
-.card2 {
-  color: #de6800;
-}
-
-.pink img {
-    height: 350px;
-    object-fit: cover;
-} */
-
-
-/* p {
-  text-align: center;
-  font-family: "Overpass", sans-serif;
-  font-weight: 400;
-  padding: 10px;
-} */
-
-/* img {
-  float: left;
-} */
-
-/* #M1 {
-  width: 20%;
-  margin: 1.66%;
-  min-width: 100px;
-  padding-top: 20%;
-} */
-
-/* #grid2 {
-  width: 20%;
-  margin: 1.66%;
-  min-width: 100px;
-  padding-top: 20%;
-} */
-
-/* img.pic {
-  width: 50%;
-  display: block;
-  margin: 1.66%;
-  min-width: 200px;
-} */
 
 
 /* .pic:hover {
