@@ -93,6 +93,11 @@ body {
   min-width: 20%;
   object-fit: cover;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: ease .6s;
+}
+
+.card img:hover{
+  width: 255px;
 }
 
 #img1{
@@ -109,8 +114,8 @@ body {
 
 @media screen and (max-width: 834px) {
   .back {
-    /* width: 100vw;
-    height: 100vh; */
+    width: 100vw;
+    height: unset;
     display: block;
   }
 
@@ -152,27 +157,30 @@ body {
   .card img{
   display: block;
   position: relative;
-  width: 100%;
+  padding:2.75%;
+  width: 95%;
   object-fit: cover;
   /* flex-direction: column;
   align-content: space-between; */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: unset;
   }
 
   .icons {
     position: fixed;
     z-index: 999;
     width: 100%;
+    padding-top: unset;
+    top: 85vh;
   }
 
   #img1{
-  left: 0;
-  top: 0;
+  left: unset;
+  top: unset;
   }
 
   #img2{
-  left: 0;
-  top: 0;
+  left: unset;
+  top: unset;
   }
 
   #finney1{
