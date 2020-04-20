@@ -6,13 +6,17 @@
 body {
   /* background: #D2E0ED; */
   font-family: "Overpass", sans-serif;
+  background: #d9a7c7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .back {
   width: 100vw;
   height: 100vh;
   display: block;
-  background-color: rgb(231, 241, 255);
+  /* background-color: rgb(231, 241, 255); */
 }
 
 .csstransforms {
@@ -102,11 +106,16 @@ body {
 
 #img1{
   left: 45vw;
-  top: 10%;
+  top: 5%;
 }
 
 #img2{
-  left: 70vw;
+  left: 60vw;
+  top: 15%;
+}
+
+#img3{
+  left: 75vw;
   top: 30%;
 }
 
@@ -173,12 +182,7 @@ body {
     top: 85vh;
   }
 
-  #img1{
-  left: unset;
-  top: unset;
-  }
-
-  #img2{
+  #img1, #img2, #img3{
   left: unset;
   top: unset;
   }
