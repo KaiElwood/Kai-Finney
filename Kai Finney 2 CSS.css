@@ -92,6 +92,7 @@ body {
 
 img:hover{
   width: 260px;
+  z-index: 999;
 }
 
 img{
@@ -101,7 +102,8 @@ img{
   min-width: 20%;
   object-fit: cover;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: ease .6s;
+  transition: ease-in-out .7s;
+  z-index: 0;
 }
 
 #img1{
