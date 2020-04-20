@@ -86,11 +86,15 @@ body {
   letter-spacing: .1em;
 }
 
-.card {
+/* .card {
   display: flex;
+} */
+
+img:hover{
+  width: 260px;
 }
 
-.card img{
+img{
   display: block;
   position: absolute;
   width: 250px;
@@ -98,10 +102,6 @@ body {
   object-fit: cover;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: ease .6s;
-}
-
-.card img:hover{
-  width: 255px;
 }
 
 #img1{
