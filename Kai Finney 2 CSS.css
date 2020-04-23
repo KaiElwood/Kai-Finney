@@ -112,13 +112,18 @@ img{
 }
 
 #img2{
-  left: 60vw;
-  top: 15%;
+  left: 55vw;
+  top: 12%;
 }
 
 #img3{
+  left: 65vw;
+  top: 19%;
+}
+
+#img4{
   left: 75vw;
-  top: 25%;
+  top: 26%;
 }
 
 /* --------------------------------mobile------------------------------------- */
@@ -184,7 +189,7 @@ img{
     top: 85vh;
   }
 
-  #img1, #img2, #img3{
+  #img1, #img2, #img3, #img4{
   left: unset;
   top: unset;
   }
